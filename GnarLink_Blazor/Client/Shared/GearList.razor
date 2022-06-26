@@ -1,0 +1,53 @@
+﻿<ul class="list-unstyled">
+    @foreach(var gear in Gears)
+    {
+        <li class="media my-3">
+            <div class="media-img-wrapper mr-2">
+                <a href="#">
+                    <img class="media-img" src="@gear.ImageUrl" alt="@gear.Title" />
+                </a>
+            </div>
+            <div class="media-body">
+                <a href="#">
+                    <h4 class="mb-0">@gear.Title</h4>
+                </a>
+                <h5 class="size">@gear.Size</h5>
+                <p>@gear.Description</p>
+                <h5 class="price">@gear.Price</h5>
+            </div>
+        </li>
+    }
+</ul>
+
+@code {
+    private static List<Gear> Gears = new List<Gear>
+    {
+        new Gear
+        {
+            Id = 1,
+            Title = "Never Summer Shaper Twin Snowboard",
+            Size = "151",
+            Description = "The NS Shaper Twin is a great all mountain board. Being a setback directional twin, it floats very well in the deep stuff while being able to ride and land switch. It's slightly volume shifted, so the size rides more like a 153 and width is wider than average. Carving on this board is a joy with a mellow turning arch and it dampens rough terrain very well. This board is just as home riding the trees and bowls as it is at the park and on groomers.",
+            ImageUrl = "https://www.companybe.com/720boardshop/product_photos/rd_images/rd_1819neversummershapertwin.jpg",
+            Price = 19.99m
+        },
+        new Gear
+        {
+            Id = 2,
+            Title = "Raleigh Tekoa",
+            Size = "Medium",
+            Description = "The Tekoa is a great hardtail suitable for city rides as well as up to intermediate mountain bike trails. With 110 mm of fork travel and 29 inch grippy tires, it excels in uneven terrain and jumping up and down sidewalks. The geometry is comfortable for an extended ride, and a 3x7 drivetrain will provide plenty of range for going fast on the flats and climbing steep slopes with ease.",
+            ImageUrl = "https://www.sefiles.net/images/library/zoom/raleigh-tekoa-1-376176-12.png",
+            Price = 29.99m
+        },
+        new Gear
+        {
+            Id = 3,
+            Title = "Polygon Siskiu D7",
+            Size = "Medium",
+            Description = "The D7 is a great full suspension trail bike. 120 mm of front and rear suspension paired with a dropper post is enough for gnarly drops and rock gardens. The modern 1x11 drivetrain is intuitive and snappy. A slack head angle paired with a steep seat angle is forgiving on the downhills and efficient on the uphills. Wether you're a seasoned mountain biker or a beginner looking to get into it, you'll feel confident on the D7.",
+            ImageUrl = "https://p.vitalmtb.com/photos/products/31853/photos/67962/s1600_photo_900608.jpg?1602787914",
+            Price = 39.99m
+        },
+    };
+}
